@@ -1,0 +1,33 @@
+.alert {
+  min-width: 1000px;
+  text-align: center;
+  border-radius: 0px;
+}
+
+.form{
+  padding: 50px;
+  border: 2px;
+  border-style: groove;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  width: 200%;
+}
+
+#submitbtn{
+  grid-column: 1/3;
+  padding: 10px;
+  margin: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main {
+  padding: 400px;
+  padding-top: 50px;
+  display: inline-block;
+}

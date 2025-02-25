@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>BeReady</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="../css/report.css" />
-		<link rel="stylesheet" href="../css/style.css" />
-	</head>
-	<body>
-		<header>
-			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-				<div class="container">
-					<a class="navbar-brand" href="../index.html"><span class="blue">Be</span>Ready</a>
-					<button
-						class="navbar-toggler d-lg-none"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#collapsibleNavId"
-						aria-controls="collapsibleNavId"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="collapsibleNavId">
-						<ul class="navbar-nav me-auto mt-2 mt-lg-0">
-							<li class="nav-item">
-								<a class="nav-link" href="report.html" aria-current="page"
-									>Báo cáo</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="news.html">Tin tức</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle"
-									href="#"
-									id="dropdownId"
-									data-bs-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-									>Cộng đồng</a
-								>
-								<div
-									class="dropdown-menu"
-									aria-labelledby="dropdownId"
-								>
-									<a class="dropdown-item" href="forum.html">Diễn đàn</a>
-									<a class="dropdown-item" href="faq.html">FAQ</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<main style="padding: 400px; padding-top: 50px;">
-            <h1>Báo cáo</h1>
-            <h5>Bạn nghĩ rằng bạn đã bị cúm?</h5>
-            <a href="tel:115"><h6>Gọi số khẩn cấp</h6></a><br>
-            <form action="submit.php" method="post" enctype="application/x-www-form-urlencoded" style="padding: 50px; border: 2px; border-style: groove;">
-                <label for="name">Tên:               </label>
-                <input type="text" id="name"><br>
-                <label for="phone">Số điện thoại:</label>
-                <input type="tel" id="phone"><br>
-                <label for="add">Địa chỉ:            </label>
-                <input type="text" id="add"><br>
-                <label for="feel">Triệu chứng:        </label>
-                <input type="text" id="feel"><br>
-                <input type="submit" value="Yêu cầu bác sĩ">
-            </form>
-        </main>
-		<footer></footer>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"
-		></script>
-	</body>
+<head>
+	<meta charset="utf8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>BeReady</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../css/report.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="../index.html"><span class="blue">Be</span>Ready</a>
+				<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+					data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavId">
+					<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="report.html" aria-current="page">Report</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="news.html">News</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">Community</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownId">
+								<a class="dropdown-item" href="forum.html">Forum</a>
+								<a class="dropdown-item" href="faq.html">FAQ</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="alert alert-danger" role="alert">
+		<strong><u>Emergency service:</u></strong> <a href="callto:115">Call 115</a> if you have severe symptoms
+	</div>
+	<main>
+
+		<h1>Report</h1><br>
+		<form action="submit.php" method="post" enctype="application/x-www-form-urlencoded" class="form">
+			<h3>Personal info</h3><br>
+			<label for="name">Name:</label>
+			<input type="text" id="name">
+			<label for="phone">Phone number:</label>
+			<input type="tel" id="phone">
+			<label for="age">Age:</label>
+			<input type="number" name="age" id="age">
+			<label for="gender">Gender:</label>
+			<select name="gender" id="gender">
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Other">Other</option>
+				<option value="pnts">Prefer not to say</option>
+			</select>
+			<label for="add">Billing Address:</label>
+			<input type="text" id="add">
+			<label for="email">Email:</label>
+			<input type="email" id="email"><hr><hr>
+
+			<h3>Medical info</h3><br>
+			<label for="feel">Symptoms:</label>
+			<input type="text" id="feel">
+			<label for="temp">Temperature:</label>
+			<span><input type="number" id="temp" placeholder="37"> °C </span>
+			<label for="pulse">Pulse:</label>
+			<span><input type="number" id="pulse" placeholder="70"> bpm</span>
+			<label for="bp">Blood pressure:</label>
+			<span><input type="number" id="bp" placeholder="120 - 80"> mmHg</span>
+			<label for="o2">Oxygen saturation:</label>
+			<span><input type="number" id="o2" placeholder="100"> %</span>
+			<label for="med">Medications:</label>
+			<input type="text" id="med"><hr><hr>
+
+			<h3>Emergency contact</h3><br>
+			<label for="ename">Name:</label>
+			<input type="text" id="ename">
+			<label for="ephone">Phone number:</label>
+			<input type="tel" id="ephone">
+			<input type="submit" id="submitbtn" value="Request a doctor">
+		</form>
+	</main>
+	<footer></footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>
