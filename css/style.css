@@ -6,3 +6,11 @@ main {
 .blue {
   color: #3498db;
 }
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}

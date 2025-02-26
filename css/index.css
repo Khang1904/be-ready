@@ -28,3 +28,7 @@
   overflow: hidden;
   align-self: stretch;
 }
+
+.other {
+  padding: 50px;
+}
