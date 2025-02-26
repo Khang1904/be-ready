@@ -1,118 +1,176 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>BeReady</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="../css/faq.css">
-	</head>
-	<body>
-		<header>
-			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-				<div class="container">
-					<a class="navbar-brand" href="../index.html"><span class="blue">Be</span>Ready</a>
-					<button
-						class="navbar-toggler d-lg-none"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#collapsibleNavId"
-						aria-controls="collapsibleNavId"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="collapsibleNavId">
-						<ul class="navbar-nav me-auto mt-2 mt-lg-0">
-							<li class="nav-item">
-								<a class="nav-link" href="report.html" aria-current="page"
-									>Report</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="news.html">News</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle"
-									href="#"
-									id="dropdownId"
-									data-bs-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-									>Community</a
-								>
-								<div
-									class="dropdown-menu"
-									aria-labelledby="dropdownId"
-								>
-									<a class="dropdown-item" href="forum.html">Forum</a>
-									<a class="dropdown-item" href="faq.html">FAQ</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<main style="padding: 400px; padding-top: 50px;">
-            <h1>Frequently Asked Questions</h1>
-            <hr>
-            <b>What is the flu?</b> The flu is a respiratory infection caused by influenza viruses, affecting the nose, throat, and sometimes the lungs.
-            <hr>
-            <b>How is the flu different from the common cold?</b> The flu usually comes on suddenly and is more severe than the common cold, with symptoms like high fever, body aches, and fatigue.
-            <hr>
-            <b>Who is at high risk for flu complications?</b> High-risk groups include older adults, young children, pregnant women, and those with chronic conditions such as asthma, diabetes, or heart disease.
-            <hr>
-            <b>How effective is the flu vaccine?</b> The flu vaccine is the best way to prevent the flu and its complications. Its effectiveness varies each year but typically reduces the risk of flu by 40-60%.
-            <hr>
-            <b>Can the flu vaccine cause the flu?</b> No, the flu vaccine cannot cause the flu. It contains inactivated (dead) viruses or a single gene from the flu virus (not the whole virus) to stimulate an immune response.
-            <hr>
-            <b>When should I get the flu vaccine?</b> It's best to get the flu vaccine before the flu season starts, usually from September to November, but getting vaccinated later can still be beneficial.
-            <hr>
-            <b>What are common side effects of the flu vaccine?</b> Common side effects include soreness, redness, or swelling at the injection site, mild fever, and mild aches. These side effects are usually short-term and less severe than flu symptoms.
-            <hr><br>
-            <form action="question" method="post" style="text-align: center;">
-                <h2>Have another question?</h2>
-                <label for="q">Question:</label>
-                <input type="text" id="q"> <input type="submit" value="Submit">
-            </form>
-        </main>
-				<footer>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4">
-								<h5>BeReady</h5>
-								<p>BeReady is a website that provides information on diseases and how to prevent them.</p>
-							</div>
-							<div class="col-md-4">
-								<h5>Links</h5>
-								<ul>
-									<li><a href="pages/report.html">Report</a></li>
-									<li><a href="pages/news.html">News</a></li>
-									<li><a href="pages/forum.html">Forum</a></li>
-									<li><a href="pages/faq.html">FAQ</a></li>
-								</ul>
-							</div>
-							<div class="col-md-4">
-								<h5>Contact</h5>
-								<p>Trần Nhật Khang<br><a href="mailto:tnkhang1109@gmail.com">Email</a><br><a href="https://github.com/Khang1904">Github</a><br>All rights reserved</p>
-							</div>
-						</div>
-					</div>
-				</footer>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"
-		></script>
-	</body>
+<head>
+	<meta charset="utf8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>BeReady</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/faq.css">
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="../index.html"><span class="blue">Be</span>Ready</a>
+				<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+					data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavId">
+					<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="report.html" aria-current="page">Report</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="news.html">News</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">Community</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownId">
+								<a class="dropdown-item" href="forum.html">Forum</a>
+								<a class="dropdown-item" href="faq.html">FAQ</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<h1>Frequently Asked Questions</h1>
+		<hr>
+		<ul>
+			<li>
+				<p>
+					<a class="btn btn-primary" data-bs-toggle="collapse" href="#contentId1" aria-expanded="false"
+						aria-controls="contentId" id="collapse">
+						Infectious Diseases
+					</a>
+				</p>
+				<div class="collapse" id="contentId1">
+					<pre>
+What should I do if I think I have an infectious disease?
+Contact your healthcare provider for advice and treatment.
+
+How can I avoid getting infectious diseases?
+Prevent the spread of germs by washing your hands often and getting immunized.
+
+What should I do if I think I have food poisoning?
+See your healthcare provider and report your concern to public health authorities.
+
+What should I do if I've been bitten or scratched by an animal?
+Flush the wound with water for at least 15 minutes and see your healthcare provider as soon as possible.
+
+What should I do if I find a tick on my body?
+Remove the tick right away and monitor for any symptoms of Lyme disease.
+		</pre>
+				</div>
+			</li>
+
+			<li>
+				<p>
+					<a class="btn btn-primary" data-bs-toggle="collapse" href="#contentId2" aria-expanded="false"
+						aria-controls="contentId" id="collapse">
+						Chronic Diseases
+					</a>
+				</p>
+				<div class="collapse" id="contentId2">
+					<pre>
+What are some common chronic diseases?
+Common chronic diseases include diabetes, heart disease, and chronic obstructive pulmonary disease (COPD).
+
+How can I manage a chronic disease?
+Follow your healthcare provider's advice, take medications as prescribed, and make lifestyle changes such as eating a healthy diet and exercising regularly.
+
+What are the risk factors for chronic diseases?
+Risk factors include smoking, poor diet, lack of physical activity, and excessive alcohol consumption.
+		</pre>
+				</div>
+			</li>
+
+
+			<li>
+				<p>
+					<a class="btn btn-primary" data-bs-toggle="collapse" href="#contentId3" aria-expanded="false"
+						aria-controls="contentId" id="collapse">
+						Autoimmune Diseases
+					</a>
+				</p>
+				<div class="collapse" id="contentId3">
+					<pre>
+What are some common autoimmune diseases?
+Common autoimmune diseases include rheumatoid arthritis, lupus, and multiple sclerosis.
+
+How are autoimmune diseases diagnosed?
+Diagnosis typically involves blood tests, imaging studies, and a thorough medical history and physical examination.
+
+What are the treatment options for autoimmune diseases?
+Treatment options include medications to reduce inflammation and suppress the immune system, as well as lifestyle changes and physical therapy.
+		</pre>
+				</div>
+			</li>
+
+			<li>
+				<p>
+					<a class="btn btn-primary" data-bs-toggle="collapse" href="#contentId4" aria-expanded="false"
+						aria-controls="contentId" id="collapse">
+						Cancer
+					</a>
+				</p>
+				<div class="collapse" id="contentId4">
+					<pre>
+What are the common types of cancer?
+Common types of cancer include breast cancer, lung cancer, and colorectal cancer.
+
+How is cancer diagnosed?
+Diagnosis typically involves imaging studies, biopsies, and blood tests.
+
+What are the treatment options for cancer?
+Treatment options include surgery, radiation therapy, chemotherapy, and targeted therapy.
+					</pre>
+				</div>
+			</li>
+		</ul>
+		<form action="question" method="post" style="text-align: center;">
+			<h2>Have another question?</h2>
+			<label for="q">Question:</label>
+			<input type="text" id="q"> <input type="submit" value="Submit">
+		</form>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h5>BeReady</h5>
+					<p>BeReady is a website that provides information on diseases and how to prevent them.</p>
+				</div>
+				<div class="col-md-4">
+					<h5>Links</h5>
+					<ul>
+						<li><a href="pages/report.html">Report</a></li>
+						<li><a href="pages/news.html">News</a></li>
+						<li><a href="pages/forum.html">Forum</a></li>
+						<li><a href="pages/faq.html">FAQ</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h5>Contact</h5>
+					<p>Trần Nhật Khang<br><a href="mailto:tnkhang1109@gmail.com">Email</a><br><a
+							href="https://github.com/Khang1904">Github</a><br>All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>

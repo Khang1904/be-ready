@@ -1,6 +1,6 @@
 main {
-  padding: 200px;
-  padding-top: 100px;
+  padding: 400px;
+  padding-top: 50px;
   display: inline-block;
 }
 .blue {
@@ -13,4 +13,12 @@ footer {
   padding: 10px;
   bottom: 0;
   width: 100%;
+}
+
+pre {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  overflow: auto;
 }

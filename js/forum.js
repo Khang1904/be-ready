@@ -1,0 +1,4 @@
+const usernames = ["SneezyDragon123", "FluFighter5000", "CoughyMcCoughface", "GerminatorX", "VirusViking", "FluMasterFlex", "SneezeGuardWarrior", "LimpNoodle99", "SicklySam", "BoogerBomber", "SnotRocketeer", "MucusMarauder", "PhlegmFatale", "SicklySally", "SicklySteve", "SicklySue", "SicklySammy", "LimpNoodle99", "RecoveryRaccoon", "WobblyWombat", "SicklySquirrel", "SicklySloth", "SicklySnake", "SicklySpider", "SicklySeal", "SicklySalamander", "SicklySquid", "SicklySwordfish", "SicklyShark", "SicklySwordfish", "SicklySparrow", "SicklySwan"];
+document.getElementById("username1").innerHTML = usernames[Math.floor(Math.random() * usernames.length)];
+document.getElementById("username2").innerHTML = usernames[Math.floor(Math.random() * usernames.length)];
+document.getElementById("username3").innerHTML = usernames[Math.floor(Math.random() * usernames.length)];
