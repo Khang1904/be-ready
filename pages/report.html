@@ -37,6 +37,9 @@
 								<a class="dropdown-item" href="faq.html">FAQ</a>
 							</div>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="login.html">Login</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -66,7 +69,9 @@
 			<label for="add">Billing Address:</label>
 			<input type="text" id="add">
 			<label for="email">Email:</label>
-			<input type="email" id="email"><hr><hr>
+			<input type="email" id="email">
+			<hr>
+			<hr>
 
 			<h3>Medical info</h3><br>
 			<label for="feel">Symptoms:</label>
@@ -80,7 +85,9 @@
 			<label for="o2">Oxygen saturation:</label>
 			<span><input type="number" id="o2" placeholder="100"> %</span>
 			<label for="med">Medications:</label>
-			<input type="text" id="med"><hr><hr>
+			<input type="text" id="med">
+			<hr>
+			<hr>
 
 			<h3>Emergency contact</h3><br>
 			<label for="ename">Name:</label>
@@ -88,6 +95,7 @@
 			<label for="ephone">Phone number:</label>
 			<input type="tel" id="ephone">
 			<input type="submit" id="submitbtn" value="Request a doctor">
+			<input type="button" id="pdfbtn" value="Download PDF" onclick="generatePDF()">
 		</form>
 	</main>
 	<footer>
@@ -104,11 +112,13 @@
 						<li><a href="pages/news.html">News</a></li>
 						<li><a href="pages/forum.html">Forum</a></li>
 						<li><a href="pages/faq.html">FAQ</a></li>
+						<li><a href="pages/login.html">Login</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4">
 					<h5>Contact</h5>
-					<p>Trần Nhật Khang<br><a href="mailto:tnkhang1109@gmail.com">Email</a><br><a href="https://github.com/Khang1904">Github</a><br>All rights reserved</p>
+					<p>Trần Nhật Khang<br><a href="mailto:tnkhang1109@gmail.com">Email</a><br><a
+							href="https://github.com/Khang1904">Github</a><br>All rights reserved</p>
 				</div>
 			</div>
 		</div>
@@ -117,6 +127,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.0/jspdf.umd.min.js"></script>
+
+	<script src="../js/report.js"></script>
 </body>
 
 </html>

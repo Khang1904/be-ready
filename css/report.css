@@ -15,7 +15,7 @@
   width: 200%;
 }
 
-#submitbtn{
+#submitbtn, #pdfbtn {
   grid-column: 1/3;
   padding: 10px;
   margin: 10px;
