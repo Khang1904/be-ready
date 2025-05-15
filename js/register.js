@@ -1,5 +1,6 @@
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 function register(email, password) {
     return auth.createUserWithEmailAndPassword(email, password)
@@ -13,11 +14,11 @@ function register(email, password) {
 }
 
 document.getElementById("registerBtn").addEventListener("click", async () => {
-    const email = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const cpassword = document.getElementById("cpassword").value;
 
-    document.getElementById("username").value = "";
+    document.getElementById("email").value = "";
     document.getElementById("password").value = "";
     document.getElementById("cpassword").value = "";
 

@@ -13,15 +13,19 @@ function login(email, password) {
 }
 
 document.getElementById("loginBtn").addEventListener("click", async () => {
-    const email = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    document.getElementById("username").value = "";
+    document.getElementById("email").value = "";
     document.getElementById("password").value = "";
 
     try {
         const user = await login(email, password);
-        window.location.href = "./dashboard.html";
+        if (email === "tnkhang1109@gmail.com"){
+            window.location.href = "../pages/admin.html";
+        } else {
+            window.location.href = "../pages/dashboard.html";
+        }
     } catch (error) {
         document.getElementById("status").innerText = `Login failed. ${error.message}`;
     }
