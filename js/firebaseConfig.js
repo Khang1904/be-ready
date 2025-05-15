@@ -1,4 +1,4 @@
-export const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyCQxKWANPeUX1TazD1N6_X-7xl_IQBRHLo",
     authDomain: "beready-tnk12.firebaseapp.com",
     projectId: "beready-tnk12",

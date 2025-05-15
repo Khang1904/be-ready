@@ -1,11 +1,8 @@
-import { firebaseConfig } from "./firebaseConfig.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
 const app = firebase.initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = firebase.auth();
 
 function register(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password)
+    return auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             return userCredential.user;
         })

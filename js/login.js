@@ -1,16 +1,13 @@
-import { firebaseConfig } from "./firebaseConfig.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
 const app = firebase.initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = firebase.auth();
 
 function login(email, password) {
-    return signInWithEmailAndPassword(auth, email, password)
+    return auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             return userCredential.user;
         })
         .catch((error) => {
-                        console.error("Login failed:", error.message);
+            console.error("Login failed:", error.message);
             throw error;
         });
 }
@@ -24,8 +21,8 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
 
     try {
         const user = await login(email, password);
-        window.location.href = "../dashboard.html";
+        window.location.href = "./dashboard.html";
     } catch (error) {
-        document.getElementById("status").innerText = "Login failed. Please check your credentials.";
+        document.getElementById("status").innerText = `Login failed. ${error.message}`;
     }
 });
