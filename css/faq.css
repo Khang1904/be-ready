@@ -3,3 +3,11 @@
   border-color: #fff;
   color: #000;
 }
+
+body {
+  text-align: center;
+}
+
+#faq {
+  text-align: left;
+}

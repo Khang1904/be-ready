@@ -48,7 +48,7 @@
 	<main>
 		<h1>Frequently Asked Questions</h1>
 		<hr>
-		<ul>
+		<ul id="faq">
 			<li>
 				<p>
 					<a class="btn btn-primary" data-bs-toggle="collapse" href="#contentId1" aria-expanded="false"
@@ -57,22 +57,19 @@
 					</a>
 				</p>
 				<div class="collapse" id="contentId1">
-					<pre>
-What should I do if I think I have an infectious disease?
-Contact your healthcare provider for advice and treatment.
-
-How can I avoid getting infectious diseases?
-Prevent the spread of germs by washing your hands often and getting immunized.
-
-What should I do if I think I have food poisoning?
-See your healthcare provider and report your concern to public health authorities.
-
-What should I do if I've been bitten or scratched by an animal?
-Flush the wound with water for at least 15 minutes and see your healthcare provider as soon as possible.
-
-What should I do if I find a tick on my body?
-Remove the tick right away and monitor for any symptoms of Lyme disease.
-		</pre>
+					<ul>
+						<li><strong>What should I do if I think I have an infectious disease?</strong><br>Contact your
+							healthcare provider for advice and treatment.</li><br>
+						<li><strong>How can I avoid getting infectious diseases?</strong><br>Prevent the spread of germs
+							by washing your hands often and getting immunized.</li><br>
+						<li><strong>What should I do if I think I have food poisoning?</strong><br>See your healthcare
+							provider and report your concern to public health authorities.</li><br>
+						<li><strong>What should I do if I've been bitten or scratched by an animal?</strong><br>Flush
+							the wound with water for at least 15 minutes and see your healthcare provider as soon as
+							possible.</li><br>
+						<li><strong>What should I do if I find a tick on my body?</strong><br>Remove the tick right away
+							and monitor for any symptoms of Lyme disease.</li>
+					</ul>
 				</div>
 			</li>
 
@@ -84,16 +81,15 @@ Remove the tick right away and monitor for any symptoms of Lyme disease.
 					</a>
 				</p>
 				<div class="collapse" id="contentId2">
-					<pre>
-What are some common chronic diseases?
-Common chronic diseases include diabetes, heart disease, and chronic obstructive pulmonary disease (COPD).
-
-How can I manage a chronic disease?
-Follow your healthcare provider's advice, take medications as prescribed, and make lifestyle changes such as eating a healthy diet and exercising regularly.
-
-What are the risk factors for chronic diseases?
-Risk factors include smoking, poor diet, lack of physical activity, and excessive alcohol consumption.
-		</pre>
+					<ul>
+						<li><strong>What are some common chronic diseases?</strong><br>Common chronic diseases include
+							diabetes, heart disease, and chronic obstructive pulmonary disease (COPD).</li><br>
+						<li><strong>How can I manage a chronic disease?</strong><br>Follow your healthcare provider's
+							advice, take medications as prescribed, and make lifestyle changes such as eating a healthy
+							diet and exercising regularly.</li><br>
+						<li><strong>What are the risk factors for chronic diseases?</strong><br>Risk factors include
+							smoking, poor diet, lack of physical activity, and excessive alcohol consumption.</li>
+					</ul>
 				</div>
 			</li>
 
@@ -106,16 +102,16 @@ Risk factors include smoking, poor diet, lack of physical activity, and excessiv
 					</a>
 				</p>
 				<div class="collapse" id="contentId3">
-					<pre>
-What are some common autoimmune diseases?
-Common autoimmune diseases include rheumatoid arthritis, lupus, and multiple sclerosis.
-
-How are autoimmune diseases diagnosed?
-Diagnosis typically involves blood tests, imaging studies, and a thorough medical history and physical examination.
-
-What are the treatment options for autoimmune diseases?
-Treatment options include medications to reduce inflammation and suppress the immune system, as well as lifestyle changes and physical therapy.
-		</pre>
+					<ul>
+						<li><strong>What are some common autoimmune diseases?</strong><br>Common autoimmune diseases
+							include rheumatoid arthritis, lupus, and multiple sclerosis.</li><br>
+						<li><strong>How are autoimmune diseases diagnosed?</strong><br>Diagnosis typically involves
+							blood tests, imaging studies, and a thorough medical history and physical examination.</li>
+						<br>
+						<li><strong>What are the treatment options for autoimmune diseases?</strong><br>Treatment
+							options include medications to reduce inflammation and suppress the immune system, as well
+							as lifestyle changes and physical therapy.</li>
+					</ul>
 				</div>
 			</li>
 
@@ -127,24 +123,22 @@ Treatment options include medications to reduce inflammation and suppress the im
 					</a>
 				</p>
 				<div class="collapse" id="contentId4">
-					<pre>
-What are the common types of cancer?
-Common types of cancer include breast cancer, lung cancer, and colorectal cancer.
-
-How is cancer diagnosed?
-Diagnosis typically involves imaging studies, biopsies, and blood tests.
-
-What are the treatment options for cancer?
-Treatment options include surgery, radiation therapy, chemotherapy, and targeted therapy.
-					</pre>
+					<ul>
+						<li><strong>What are the common types of cancer?</strong><br>Common types of cancer include
+							breast cancer, lung cancer, and colorectal cancer.</li><br>
+						<li><strong>How is cancer diagnosed?</strong><br>Diagnosis typically involves imaging studies,
+							biopsies, and blood tests.</li><br>
+						<li><strong>What are the treatment options for cancer?</strong><br>Treatment options include
+							surgery, radiation therapy, chemotherapy, and targeted therapy.</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
-		<form action="question" method="post" style="text-align: center;">
+		<div id="ask">
 			<h2>Have another question?</h2>
 			<label for="q">Question:</label>
 			<input type="text" id="q"> <input type="submit" value="Submit">
-		</form>
+		</div>
 	</main>
 	<footer>
 		<div class="container">
