@@ -1,5 +1,6 @@
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 function login(email, password) {
     return auth.signInWithEmailAndPassword(email, password)
@@ -21,11 +22,21 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
 
     try {
         const user = await login(email, password);
-        if (email === "tnkhang1109@gmail.com"){
-            window.location.href = "../pages/admin.html";
-        } else {
-            window.location.href = "../pages/dashboard.html";
-        }
+        db.collection("users").doc(user.uid).get()
+            .then((doc) => {
+                if (doc.exists) {
+                    if (doc.data().role === 1) {
+                        window.location.href = "../pages/admin.html";
+                    } else {
+                        window.location.href = "../pages/dashboard.html";
+                    }
+                } else {
+                    document.getElementById("status").innerText = "No such user!";
+                }
+            })
+            .catch((error) => {
+                console.error("Error getting document:", error);
+            });
     } catch (error) {
         document.getElementById("status").innerText = `Login failed. ${error.message}`;
     }

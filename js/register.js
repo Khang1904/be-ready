@@ -14,10 +14,12 @@ function register(email, password) {
 }
 
 document.getElementById("registerBtn").addEventListener("click", async () => {
+    const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const cpassword = document.getElementById("cpassword").value;
 
+    document.getElementById("username").value = "";    
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
     document.getElementById("cpassword").value = "";
@@ -25,6 +27,12 @@ document.getElementById("registerBtn").addEventListener("click", async () => {
     if ((email && password && cpassword) && (password.length >= 6) && (password === cpassword)) {
         try {
             const user = await register(email, password);
+            await db.collection("users").doc(user.uid).set({
+                username: username,
+                email: email,
+                role: 0,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
             window.location.href = "login.html";
         } catch (error) {
             document.getElementById("status").innerText = `Registration failed: ${error.message}`;
