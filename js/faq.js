@@ -22,7 +22,6 @@ async function main() {
 
 document.getElementById("submit").addEventListener("click", main);
 
-// Auto-expand textarea
 const questionEl = document.getElementById("question");
 questionEl.addEventListener("input", function() {
     this.style.height = "auto";
