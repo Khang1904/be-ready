@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  width: 200%;
+  width: 175%;
 }
 
 #submitbtn, #pdfbtn {
@@ -30,4 +30,9 @@ main {
   padding: 400px;
   padding-top: 50px;
   display: inline-block;
+}
+
+.tab {
+  position: relative;
+  left: 50px;
 }

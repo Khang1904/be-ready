@@ -10,7 +10,7 @@ function generatePDF() {
         feel: document.getElementById("feel").value,
         temp: document.getElementById("temp").value,
         pulse: document.getElementById("pulse").value,
-        bp: document.getElementById("bp").value,
+        bp: `${document.getElementById("sys").value}/${document.getElementById("dias").value}`,
         o2: document.getElementById("o2").value,
         med: document.getElementById("med").value,
 
