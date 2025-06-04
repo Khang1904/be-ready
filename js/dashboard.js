@@ -8,7 +8,15 @@ auth.onAuthStateChanged((user) => {
         db.collection('users').doc(user.uid).get()
             .then((doc) => {
                 const userData = doc.data();
-                document.querySelector('#greet').innerHTML = `Welcome back, ${userData.username}`
+                document.querySelector('#greet').innerHTML = `Welcome back, ${userData.username}`;
+                if (userData.role === 1) {
+                    console.log("User is an admin.");
+                    const adminLink = document.createElement('a');
+                    adminLink.href = './admin.html';
+                    adminLink.textContent = 'Go to Admin Dashboard';
+                    adminLink.id = 'adminLink';
+                    document.querySelector('.header').appendChild(adminLink);
+                }
             })
             .catch((error) => {
                 console.error("Error fetching user data:", error);
@@ -29,11 +37,3 @@ function signOutUser() {
             console.error("Sign out error:", error);
         });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const signOutBtn = document.querySelector('.signout');
-    signOutBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        signOutUser();
-    });
-});

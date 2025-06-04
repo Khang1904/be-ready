@@ -1,7 +1,3 @@
-main {
-    width: 100%;
-}
-
 .signout {
     display: inline-block;
     background-color: #e74c3c;
@@ -18,19 +14,4 @@ main {
 .signout:hover {
     background-color: #c0392b;
     text-decoration: none;
-}
-
-#greet {
-    position: relative;
-    left: 50px;
-    font-size: 1.2em;
-    color: #2c3e50;
-    line-height: 1.2;
-}
-
-#adminLink {
-    position: relative;
-    left: 50px;
-    font-size: 1.2em;
-    line-height: 1.2;
 }
