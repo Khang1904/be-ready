@@ -1,7 +1,3 @@
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db = firebase.firestore();
-
 function register(email, password) {
     return auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
@@ -19,7 +15,18 @@ document.getElementById("registerBtn").addEventListener("click", async () => {
     const password = document.getElementById("password").value;
     const cpassword = document.getElementById("cpassword").value;
 
-    document.getElementById("username").value = "";    
+    // Check for existing username
+    const usernameSnapshot = await db.collection("users").where("username", "==", username).get();
+    if (!username || !email || !password || !cpassword) {
+        document.getElementById("status").innerText = "Please ensure all fields are filled correctly.";
+        return;
+    }
+    if (!usernameSnapshot.empty) {
+        document.getElementById("status").innerText = "Username is already taken. Please choose another.";
+        return;
+    }
+
+    document.getElementById("username").value = "";
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
     document.getElementById("cpassword").value = "";

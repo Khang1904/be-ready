@@ -1,7 +1,3 @@
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db = firebase.firestore();
-
 function login(email, password) {
     return auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {

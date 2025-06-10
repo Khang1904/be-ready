@@ -1,86 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeReady</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<head>
-	<meta charset="utf8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>BeReady</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-	<link rel="stylesheet" href="../css/admin.css">
-	<link rel="stylesheet" href="../css/style.css">
-</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html"
+            ><span class="blue">Be</span>Ready</a
+          >
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="report.html" aria-current="page"
+                  >Report</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Community</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="forum.html">Forum</a>
+                  <a class="dropdown-item" href="faq.html">FAQ</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+			<h1>Admin Panel</h1>
+      <button class="signout">End Session</button>
+			<hr>
+			<h4>Find User</h4>
+			<p id="status1"></p>
+			<input type="text" name="username" id="username" placeholder="Who do you want to configure?">
+			<button id="search">Search</button>
+			<hr>
+			<h4>Configure User</h4>
+			<p id="status2"></p>
+			<p>Select an option:</p>
+			<select name="actions" id="actions">
+				<option value="grant">Grant Admin</option>
+				<option value="revoke">Revoke Admin</option>
+			</select>
+			<button id="confirm">Confirm</button>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>BeReady</h5>
+            <p>
+              BeReady is a website that provides information on diseases and how
+              to prevent them.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Links</h5>
+            <ul>
+              <li><a href="report.html">Report</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="forum.html">Forum</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact</h5>
+            <p>
+              Trần Nhật Khang<br /><a href="mailto:tnkhang1109@gmail.com"
+                >Email</a
+              ><br /><a href="https://github.com/Khang1904">Github</a><br />All
+              rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-<body>
-	<header>
-		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-			<div class="container">
-				<a class="navbar-brand" href="../index.html"><span class="blue">Be</span>Ready</a>
-				<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="collapsibleNavId">
-					<ul class="navbar-nav me-auto mt-2 mt-lg-0">
-						<li class="nav-item">
-							<a class="nav-link" href="report.html" aria-current="page">Report</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="news.html">News</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">Community</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownId">
-								<a class="dropdown-item" href="forum.html">Forum</a>
-								<a class="dropdown-item" href="faq.html">FAQ</a>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="dashboard.html">Dashboard</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<main>
-		<button class="signout">End Session</button>
-	</main>
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<h5>BeReady</h5>
-					<p>BeReady is a website that provides information on diseases and how to prevent them.</p>
-				</div>
-				<div class="col-md-4">
-					<h5>Links</h5>
-					<ul>
-						<li><a href="report.html">Report</a></li>
-						<li><a href="news.html">News</a></li>
-						<li><a href="forum.html">Forum</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<h5>Contact</h5>
-					<p>Trần Nhật Khang<br><a href="mailto:tnkhang1109@gmail.com">Email</a><br><a
-							href="https://github.com/Khang1904">Github</a><br>All rights reserved</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-app-compat.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-firestore-compat.min.js"></script>
-	<script src="../js/firebaseConfig.js"></script>
-	<script src="../js/admin.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-firestore-compat.min.js"></script>
+    <script src="../js/firebaseConfig.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
 </html>
